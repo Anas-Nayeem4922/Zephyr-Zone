@@ -1,0 +1,70 @@
+body{
+    background-image: linear-gradient(to top, #1b1b1b, #515151);
+    margin: 0;
+    padding: 0;
+    color: #eee;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.buying-details{
+    min-width: 40%;
+    min-height: 80vh;
+    padding: 2.5rem;
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border: 0.3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
+}
+.buying-details:hover{
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);
+}
+.payment{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem 0 3rem;
+    min-height: 80vh;
+    min-width: 40%;
+    margin: 2rem;
+    border: 1px solid black;
+    border: 0.3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
+}
+.payment:hover{
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);
+}
+.payment-details, .payment-amount{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 0 1.5rem;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.btn-primary{
+    background-color: #0d1b28;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.5rem;
+}
+.hr-payment{
+    border: none;
+    border: 0.5px dashed rgb(194, 194, 194);
+    min-width: 100%;
+    position: relative;
+    right: 30px;
+}

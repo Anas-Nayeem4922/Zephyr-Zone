@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zephyr Zone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a class="navbar-brand" href="#">
+            <div class="logo">
+                <img src="https://png.pngtree.com/template/20210709/ourmid/pngtree-shopping-logo-design-image_545854.jpg" alt="logo">
+            </div>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="options">
+            <div class="account">
+                <i class="fa-solid fa-circle-user" id="info-icon"></i>
+                <div class="popup" id="popup">
+                    <% if (user) { %>
+                        <a href="/logout" class="account-options">Logout</a>
+                        <a href="/orders" class="account-options">My orders</a>
+                    <% } %>
+                    <% if (!user) { %>
+                        <a href="/login" class="account-options">Login</a>
+                        <a href="/signup" class="account-options">Signup</a>
+                    <% } %>
+                </div>
+                <p>Account</p>
+            </div>
+            <div class="cart">
+                <a href="/cart">
+                    <i class="fa-solid fa-cart-shopping position-relative">
+                        <% if (user) { %>
+                            <span class="cart-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <%= user.cart.length %>
+                            </span>
+                        <% } %>
+                    </i>
+                    <p>Cart</p>
+                </a>
+            </div>
+            <div class="seller">
+                <a href="/seller">
+                    <i class="fa-brands fa-sellsy"></i>
+                    <p>Become a seller</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <% if (success && success.length) { %>
+        <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-2" role="alert">
+            <b><%= success %></b>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% } %>
+    <br>
+    <section class="items">
+        <div class="phone">
+            <a href="/phone">
+                <img src="https://suprememobiles.in/cdn/shop/files/mobiles.jpg?crop=center&height=2048&v=1664280076&width=2048" alt="Phone">
+                <p>Mobiles</p>
+            </a>
+            
+        </div>
+        <a href="/men">
+            <div class="fashion-men">
+                <img src="https://www.realmenrealstyle.com/wp-content/uploads/2023/08/Rugged-Look.jpg" alt="Men Fashion">
+                <p>Men</p>
+            </div>
+        </a>
+        <a href="/women">
+            <div class="fashion-women">
+                <img src="https://i.pinimg.com/564x/55/e1/92/55e19265c939b96b3fda45deb5f55149.jpg" alt="Women Fashion">
+                <p>Women</p>
+            </div>
+        </a>
+        <a href="/children">
+            <div class="fashion-child">
+                <img src="https://i.pinimg.com/736x/df/09/df/df09dfce328a66304b9281c2a7f725a7.jpg" alt="Children Fashion">
+                <p>Children</p>
+            </div>
+        </a>
+        <a href="/electronics">
+            <div class="electronics">
+                <img src="https://images.herzindagi.info/image/2024/Jan/Best-Laptops-Under-50000-2.jpg" alt="Laptop">
+                <p>Electronics</p>
+            </div>
+        </a>
+        <a href="/appliances">
+            <div class="appliances">
+                <img src="https://cdn.firstcry.com/education/2023/01/13101355/Names-Of-Household-Appliances-In-English.jpg" alt="Appliances">
+                <p>Appliances</p>
+            </div>
+        </a>
+        <a href="/handicrafts">
+            <div class="handicrafts">
+                <img src="https://t3.ftcdn.net/jpg/05/66/34/10/360_F_566341036_f2mCzWyHi9I4aMOSSiy1XUUhvEqdUKJ1.jpg" alt="Handicrafts">
+                <p>Handicrafts</p>
+            </div>
+        </a>
+    </section>
+    <hr>
+    <main class="mb-5">
+        <div class="best-deals">
+            <h5><b>Best deals on Smartphones</b></h5>
+            <div class="phones">
+                <div class="card">
+                    <img src="https://m.economictimes.com/thumb/msid-98897778,width-1200,height-1200,resizemode-4,imgsize-35708/6-latest-mobile-phones-with-12gb-ram-in-india.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align: center;"><b>XIAOMI 12 PRO</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.91-cdn.com/hub/wp-content/uploads/2023/09/iPhone-15-Pro-Max.png?tr=q-100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align: center;"><b>IPHONE 15</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.khoslaonline.com/wp-content/uploads/2023/06/ONE-PLUS-NORD-CE-2-LITE-5G-BLUE-TIDE-6GB128GB-300x300.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align: center;"><b>ONE PLUS NORD</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.gadgets360cdn.com/products/large/Oppo-Reno-10-Pro-Plus-5G-DB-709x800-1685018454.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" style="text-align: center;"><b>OPPO RENO 10</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sale">
+            <img src="https://img.freepik.com/free-vector/gradient-summer-sale-banner-template-with-photo_23-2148935972.jpg" alt="Summer Sale">
+        </div><hr>
+        <h5><b>Smart Gadgets</b></h5>
+        <div class="smart-gadgets">
+            <div class="card">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/power-bank/0/j/r/lm-pb436-battery-capacity-10000mah-2-usb-ports-4-in-1-cable-ios-original-imagk34um6npezdh.jpeg?q=90&crop=false" alt="...">
+                <div class="card-body">
+                  <p class="card-text" style="text-align: center;"><b>Power Bank</b></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images-cdn.ubuy.co.in/653dca4638b3b6351c03b03e-smart-watch-for-android-and-iphone.jpg" alt="...">
+                <div class="card-body">
+                  <p class="card-text" style="text-align: center;"><b>Smart Watch</b></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.macworld.com/wp-content/uploads/2024/03/airpods-max-earpods.jpg?quality=50&strip=all" alt="...">
+                <div class="card-body">
+                  <p class="card-text" style="text-align: center;"><b>Head Phones</b></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/51mWHXY8hyL._AC_UF1000,1000_QL80_.jpg" alt="...">
+                <div class="card-body">
+                  <p class="card-text" style="text-align: center;"><b>Gaming Console</b></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="/JS/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</html>

@@ -1,0 +1,66 @@
+body{
+    background-image: linear-gradient(to top, #000000, #484848);
+    margin: 0;
+    padding: 0;
+}
+h2{
+    color: white;
+    font-size: 2rem;
+}
+.seller{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.seller-form{
+    min-height: 80vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    width: 350px;
+    margin: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.5s ease;
+}
+.seller-form:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.sell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sell-button{
+    padding: 0.25rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 1.25rem;
+}
+label{
+    font-weight: 700;
+    word-spacing: 1.5px;
+}
+option:checked{
+    background-color: black; 
+    color: white;
+}
+
+textarea,
+select,
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

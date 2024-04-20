@@ -1,0 +1,225 @@
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ebebeb;
+    border-bottom: 0.25px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    
+}
+.logo img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: 0 2rem 1rem 1rem;
+}
+.navbar-collapse input{
+    width: 35rem;
+    margin-left: 2rem;
+}
+@media screen and (max-width: 1225px) {
+    .navbar-collapse input {
+      width: 25rem; 
+    }
+}
+@media screen and (max-width: 1080px) {
+    .navbar-collapse input {
+      width: 20rem; 
+    }
+}
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 0 3rem;
+}
+.account, .cart, .seller{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+}
+@media screen and (max-width: 500px) {
+    .options{
+        margin: 0 1rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .options{
+        margin: 0 0.1rem;
+    }
+}
+p{
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ITEMS SECTION */
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.items img{
+    border-radius: 0.5rem;
+    height: 3.5rem;
+    width: 4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.items img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.items p{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+@media screen and (max-width: 600px) {
+    .items img{
+        height: 3.25rem;
+        width: 3.5rem;
+    }
+    .items p{
+        font-size: 0.75rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .items img{
+        height: 3rem;
+        width: 3rem;
+    }
+    .items p{
+        font-size: 0.5rem;
+    }
+}
+.phone, .fashion-men, .fashion-women, .fashion-child, .electronics, .appliances, .handicrafts{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+hr{
+    margin: 0 2rem 2rem 2rem;
+}
+/* MAIN BODY */
+.sale{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.sale img{
+    width: 70%;
+    height: 50vh;
+    border-radius: 2rem;
+}
+/* DEALS */
+main h5{
+    margin: 1rem 0 1rem 1rem;
+    padding: 0.5rem;
+}
+.phones, .smart-gadgets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card{
+    width: 15rem;
+    height: 21rem;
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1000px) {
+    .card{
+        width: 12rem;
+        height: 17rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .card{
+        width: 10rem;
+        height: 15rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .card{
+        width: 9rem;
+        height: 14rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .card{
+        width: 7rem;
+        height: 12rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .card{
+        width: 5rem;
+        height: 8rem;
+    }
+    .card-text{
+        font-size: 0.5rem;
+    }
+}
+/* ACCOUNT OPTIONS */
+.account {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popup {
+    position: absolute;
+    top: 30px;  /* Adjust this value based on your icon's size */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.popup a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+#info-icon{
+    font-size: 19px;
+    position: relative;
+    left: 15px;
+}
+.account-options:hover{
+    border-radius: 0.5rem;
+    background-color: #000;
+    color: #fff;
+
+}
+

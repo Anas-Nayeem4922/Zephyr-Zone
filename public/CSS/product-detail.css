@@ -1,0 +1,129 @@
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 0.2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.2rem;
+    margin: 1rem;
+}
+.image{
+    min-width: 30%;
+    height: 28rem;
+    max-height: 80vh;
+    margin: 1rem 2rem 0 2rem;
+    border: 0.25px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: box-shadow 0.15s ease-in;
+}
+.image:hover, .details:hover{
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.45) ;
+}
+.image img{
+    height: 80%;
+    margin: 1rem 1.5rem 0 1.5rem;
+}
+.cart-buy-option{
+    display: flex;
+    align-items: center;
+    margin: 0 0 2rem 0;
+}
+.cart-buy-option a{
+    margin: 1rem;
+}
+.details{
+    min-width: 50%;
+    max-height: 80vh;
+    overflow-y: scroll;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    margin: 2rem 2rem 3rem 2rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: box-shadow 0.15s ease-in;
+}
+.hr-review{
+    margin: 1rem 0;
+    width: 90%;
+    color: black;
+}
+.size-selector {
+    display: flex;
+    border: 0.25px solid rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+.size-button {
+    padding: 5px 20px;
+    border: none;
+    margin: 0.1rem;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.size-button:hover {
+    background-color: rgb(240, 240, 240);
+    border: none;
+}
+.size-button.active{
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    margin: 0;
+}
+@media screen and (max-width: 470px) {
+    .size-button {
+        padding: 5px 15px;
+        border: none;
+        margin: 0.1rem;
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .size-button:hover {
+        background-color: rgb(240, 240, 240);
+        border: none;
+    }
+    .size-button.active{
+        background-color: black;
+        color: white;
+        border-radius: 0.5rem;
+        margin: 0;
+    }
+    .size-selector{
+        width: fit-content;
+    }
+}
+.show-review{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: fit-content;
+    height: fit-content;
+
+}
+@media screen and (max-width: 875px) {
+    .image, .details{
+        min-width: 60%;
+    }
+}

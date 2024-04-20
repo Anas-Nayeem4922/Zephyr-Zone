@@ -1,0 +1,103 @@
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.card{
+    width: 16.5rem;
+    height: fit-content;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+@media screen and (max-width: 1185px) and (min-width: 1110px) {
+    .card {
+        width: 18rem;
+        margin: 2.5rem;
+    }
+}
+@media screen and (max-width: 1110px) and (min-width: 1040px) {
+    .card {
+        width: 17.5rem;
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 1040px) and (min-width: 970px) {
+    .card {
+        width: 16rem;
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 890px) and (min-width: 830px) {
+    .card {
+        width: 20rem;
+        margin: 2rem 3rem;
+    }
+}
+@media screen and (max-width: 830px) and (min-width: 770px) {
+    .card {
+        width: 18rem;
+        margin: 2rem 3rem;
+    }
+}
+@media screen and (max-width: 770px) and (min-width: 740px) {
+    .card {
+        width: 18rem;
+        margin: 2rem 2.5rem;
+    }
+}
+@media screen and (max-width: 740px) and (min-width: 700px) {
+    .card {
+        width: 18rem;
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 595px) {
+    .card {
+        width: 22rem;
+        margin: 2rem 7rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .card {
+        width: 22rem;
+        margin: 2rem 5rem;
+        padding: 0.75rem;
+    }
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-text{
+    height: 60px;
+    width: 100%;
+    overflow-y: auto;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+img{
+    height: 200px;
+}
+h5{
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.15px;
+}
+ .buying{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#cart, #buy{
+    width: 100%;
+    padding: 0.25rem 3rem;
+    font-size: 0.9rem;
+    border-radius: 1.8rem;
+    margin: 0.25rem 0;
+} 
